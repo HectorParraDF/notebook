@@ -1,303 +1,119 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<!--Material Design-->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<!--jquery-->
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<!--MathJax-->
-	<script type="text/x-mathjax-config">
-	  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-	</script>
-	<script type="text/javascript" async
-	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-	</script>
-</head>
-<body>
-
-<!-- Wide card with share menu button -->
-<style>
-  .demo-card-wide.mdl-card {
-    width: 512px;
-  }
-  .demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../assets/demos/welcome_card.jpg') center / cover;
-  }
-  .demo-card-wide > .mdl-card__menu {
-    color: #fff;
-  }
-</style>
-
-<!-- Uses a header that scrolls with the text, rather than staying
-  locked at the top -->
-<div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--scroll">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Equation</th>
-      <th class="mdl-data-table__cell--non-numeric">Description</th>
-      <th class="mdl-data-table__cell--non-numeric">Gauge</th>
-    </tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \mathcal{P}^{\tau}_{\mu} \equiv \frac{\partial \mathcal{L}}{\partial \dot X^{\mu}} = -\frac{T_0}{c} \frac{(\dot X \cdot X')X'_{\mu} - (X')^2 \dot X_{\mu}}{\sqrt{(\dot X \cdot X')^2 - (\dot X)^2 (X')^2}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Canonical tau momentum density
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        None
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \mathcal{P}^{\sigma}_{\mu} \equiv \frac{\partial \mathcal{L}}{\partial X'^{\mu}} = -\frac{T_0}{c} \frac{(\dot X \cdot X')\dot X_{\mu} - (X')^2 X'_{\mu}}{\sqrt{(\dot X \cdot X')^2 - (\dot X)^2 (X')^2}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Canonical sigma momentum density
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        None
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \frac{\partial \mathcal{P}^{\tau}_{\mu}}{\partial \tau} + \frac{\partial \mathcal{P}^{\sigma}_{\mu}}{\partial \sigma} = 0
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Equations of motion in terms of momentum densities
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        None
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          S = -T_0 \int dt \int_{0}^{\sigma_1}d\sigma \left (  \frac{ds}{d\sigma} \right)\sqrt{1 - \frac{v^2_{\perp}}{c^2}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Action in terms of transverse velocity
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          L = -T_0 \int ds \sqrt{1 - \frac{v^2_{\perp}}{c^2}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Lagrangian in terms of transverse velocity
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          H = \int \frac{T_0 ds}{\sqrt{1 - \frac{v^2_{\perp}}{c^2}}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Hamiltonian in terms of transverse velocity
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          T_\text{eff} = T_0 \sqrt{1 - \frac{v^2_{\perp}}{c^2}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Effective relativistic tension
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static <br />
-        Transverse velocity
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \mu_\text{eff} = \frac{T_0}{c^2} \frac{1}{\sqrt{1 - \frac{v^2_{\perp}}{c^2}}}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Effective relativistic mass density
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static <br />
-        Transverse velocity
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \frac{\partial^2 \vec X}{\partial \sigma^2} - \frac{1}{c^2}\frac{\partial^2 \vec X}{\partial t^2} = 0
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Wave equation 
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static <br />
-        Transverse velocity <br />
-        Energy 
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \frac{\partial \vec X}{\partial t} \cdot \frac{\partial \vec X}{\partial \sigma} = 0 
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Transverse velocity gauge 
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static 
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \left (  \frac{\partial \vec X}{\partial \sigma} \right)^2 + \frac{1}{c^2} \left (  \frac{\partial \vec X}{\partial t} \right)^2 = 1
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Energy gauge
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static <br />
-        Transverse velocity
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          \left ( \frac{\partial \vec X}{\partial \sigma} \pm \frac{1}{c}\frac{\partial \vec X}{\partial t} \right)^2 = 1
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Transverse velocity and energy gauge reformulated
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Static
-      </td>
-    </tr>
-
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric">
-        $$
-          S = \frac{1}{2\pi}\int_{\Sigma_g}d^2\xi\sqrt{\gamma} \gamma^{\alpha \beta} \partial_\alpha X^{\mu} \partial_\beta X_{\mu} - \frac{\lambda}{4\pi}\int_{\Sigma_g}d^2\xi\sqrt{\gamma} \mathcal{R}
-        $$
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        Polyakov Action
-      </td>
-      <td class="mdl-data-table__cell--non-numeric">
-        None
-      </td>
-    </tr>
-
-  </tbody>
-</table>      
-    </div>
-  </main>
-</div>
-
-
+<!doctype html>
 <!--
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div id="demo" class="mdl-card__supporting-text" style="display:table-cell; vertical-align:middle;">
-    $$
-    	\mathcal{L} = -\frac{1}{4}F^{\mu \nu}F_{\mu \nu}
-    $$
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a onclick="someFunction()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Click me!
-    </a>
-  </div>
-</div>
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
 
-<div id="something" hidden>
-	$$
-    	\mathcal{L} = -\frac{1}{5}F^{\mu \nu}F_{\mu \nu}
-    $$
-</div>
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-<script>
+      https://www.apache.org/licenses/LICENSE-2.0
 
-function someFunction() 
-	{
-	document.getElementById("demo").innerHTML = document.getElementById("something").innerHTML
-	}
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
 -->
-</script>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Android</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+
+    *:focus {
+      outline:none;
+    }
+    </style>
+
+  <!--MathJax-->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="mdl-typography--text-center">
+          
+          <div class="mdl-grid">
+            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
+              <div id="eq1" style="display:inline-block;">$$S = -mc \int d\tau \sqrt{-\dot X^\mu \dot X_\mu}$$</div>
+              <span for="eq1" class="mdl-tooltip" style="font-size: 13px">Action for the relativistic particle</span>
+            </div>  
+            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
+              <div id="eq2" style="display:inline-block;"> $$ \frac{d p_\mu}{d\tau} = 0$$ </div>
+              <span for="eq2" class="mdl-tooltip" style="font-size: 13px">Equation of motion for the relativistic particle</span>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
+              <div id="eq3" style="display:inline-block;"> $$\frac{dp_\mu}{d\tau} = \frac{q}{c}F_{\mu \nu} \frac{dx^\nu}{d\tau}$$ </div>
+              <span for="eq3" class="mdl-tooltip" style="font-size: 13px">Covariant Lorentz force equation</span>
+            </div>  
+            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px;">
+              <div id="eq4" class ="equation" style="display:inline-block;">$$ S = -mc\int_\mathcal{P} ds + \frac{q}{c}\int_\mathcal{P} A_\mu (x) dx^\mu$$</div>
+              <span for="eq4" class="mdl-tooltip" style="font-size: 13px">Action for the charged relativistic particle in an electromagnetic field</span>
+            </div>
+          </div>
+
+        </div>
+
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
 
 
-</body>
+        </footer>
+
+      </div>
+
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!--This script and the div's below are for replacing div's on double clicking. Not currently on use-->
+    <script>
+      function someFunction() 
+        {
+        document.getElementById("TIGER").innerHTML = document.getElementById("JAGUAR").innerHTML
+        }
+    </script>
+
+    <div id ="JAGUAR" hidden>
+      <a ondblclick="someFunction()" style="color:#767777"> $$S = -mc \int d\tau \sqrt{-\dot X^2}$$ </a>
+    </div>
+
+  </body>
 </html>
