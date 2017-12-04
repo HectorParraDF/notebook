@@ -39,6 +39,11 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+
+    .equation {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+      -webkit-tap-highlight-color: transparent;
+    }
     </style>
 
   <!--MathJax-->
@@ -74,7 +79,7 @@
               <span for="eq3" class="mdl-tooltip" style="font-size: 13px">Covariant Lorentz force equation</span>
             </div>  
             <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px;">
-              <div id="eq4" style="display:inline-block;">$$ S = -mc\int_\mathcal{P} ds + \frac{q}{c}\int_\mathcal{P} A_\mu (x) dx^\mu$$</div>
+              <div id="eq4" class ="equation" style="display:inline-block;">$$ S = -mc\int_\mathcal{P} ds + \frac{q}{c}\int_\mathcal{P} A_\mu (x) dx^\mu$$</div>
               <span for="eq4" class="mdl-tooltip" style="font-size: 13px">Action for the charged relativistic particle in an electromagnetic field</span>
             </div>
           </div>
