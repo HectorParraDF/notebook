@@ -1,20 +1,4 @@
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
 
 <html lang="en">
   <head>
@@ -46,9 +30,14 @@
     </style>
 
   <!--MathJax-->
+	
   <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+  		TeX: { equationNumbers: { autoNumber: "AMS" } }
+		});
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   </script>
+
   <script type="text/javascript" async
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
   </script>
@@ -56,31 +45,110 @@
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
+			
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
-        <div class="mdl-typography--text-center">
-          
-          <div class="mdl-grid">
-            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
-              <div id="eq1" style="display:inline-block;">$$S = -mc \int d\tau \sqrt{-\dot X^\mu \dot X_\mu}$$</div>
-              <span for="eq1" class="mdl-tooltip" style="font-size: 13px">Action for the relativistic particle</span>
-            </div>  
-            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
-              <div id="eq2" style="display:inline-block;"> $$ \frac{d p_\mu}{d\tau} = 0$$ </div>
-              <span for="eq2" class="mdl-tooltip" style="font-size: 13px">Equation of motion for the relativistic particle</span>
-            </div>
-          </div>
+        <div class="logo-font mdl-typography--text-center" style="font-size:14px; text-align:justify">
+					
+          <div style="background-color:#e1e4e1"><br />         
+  					<p style="font-size:24px; text-align:center;">Ideal Gas in the Grand Canonical Ensemble</p>
+            <div class="mdl-grid" style="background-color:#f7f7f7;">
+              <div class="logo-font mdl-cell mdl-cell--4-col">       
+  							<p style="font-size:16px">Since the particles of an ideal gas are nonlocalized, the partition function for each one-particle subsystem is directly proportional to its volume:</p>
 
-          <div class="mdl-grid">
-            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px">
-              <div id="eq3" style="display:inline-block;"> $$\frac{dp_\mu}{d\tau} = \frac{q}{c}F_{\mu \nu} \frac{dx^\nu}{d\tau}$$ </div>
-              <span for="eq3" class="mdl-tooltip" style="font-size: 13px">Covariant Lorentz force equation</span>
-            </div>  
-            <div class="logo-font mdl-cell mdl-cell--6-col" style="font-size:21px;">
-              <div id="eq4" class ="equation" style="display:inline-block;">$$ S = -mc\int_\mathcal{P} ds + \frac{q}{c}\int_\mathcal{P} A_\mu (x) dx^\mu$$</div>
-              <span for="eq4" class="mdl-tooltip" style="font-size: 13px">Action for the charged relativistic particle in an electromagnetic field</span>
+  								$$Q_1(V,T) = Vf(T),$$
+
+  							<p style="font-size:16px">where $f$ is some function of temperature only. Computing the grand partition function yields</p>
+
+  								$$\mathcal{Q}(z,V,T) = e^{zVf(T)}.$$
+              </div>  
+              <div class="logo-font mdl-cell mdl-cell--3-col">
+  							<p style="font-size:16px">The thermodynamical quantities are:</p>
+
+  							<div id="idp" style="display:inline-block">$$P = zkTf(T), $$</div>&emsp;
+  							<div id="idn" style="display:inline-block">$$N = zVf(T),$$</div><br />
+  							<div id="idu" style="display:inline-block">$$U = zVkT^2 f'(T),$$</div><br />
+  							<div id="ida" style="display:inline-block">$$A = NkT\ln z - zVkTf(T),$$</div><br />	
+  							<div id="ida" style="display:inline-block">$$S = -Nk\ln z + zVk(Tf'(T) + f(T)).$$</div><br />	
+  							
+              </div> 
+  						<div class="logo-font mdl-cell mdl-cell--5-col">
+  							<p style="font-size:16px">The equation of state is and the energy in terms of $N$ and $T$ are</p>
+  							$$PV = NkT,$$
+  							$$U = NkT^2 f'(T)/f(T).$$
+
+              	<p style="font-size:16px">The specific heat is then</p>
+  							$$C_V = Nk\frac{2Tf(T)F'(T) + T^2 (f(T)f''(T) - (f'(T))^2)}{(f(T))2}$$
+  							
+
+  						</div> 
             </div>
+					</div>
+
+
+			     <div style="background-color:#e6e1e6"><br />         
+  					<p style="font-size:24px; text-align:center;">The Polyakov Action</p>
+            <div class="mdl-grid" style="background-color:#f7f7f7;">
+              <div class="logo-font mdl-cell mdl-cell--4-col">       
+  							<p style="font-size:16px">The Polyakov action is</p>
+
+  								$$S = - \frac{1}{4\pi\alpha'}\int d^2 \sigma \sqrt{-g} g^{\alpha \beta } \partial_\alpha X^\mu \partial_\beta X^\nu \eta_{\mu \nu},$$
+
+  							<p style="font-size:16px">where the field $g_{\alpha \beta}$ is a dynamical metric on the worldsheet. We can interpret this as a bunch of scalar fields $X$ coupled to 2d gravity.</p>
+
+                <p style="font-size:16px">The equations of motion for $X^\mu$ are</p>
+
+                  $$\partial_\alpha (\sqrt{-g} g^{\alpha \beta}\partial_{\beta}X^\mu) = 0,$$
+
+                <p style="font-size:16px">while the equations of motion for $g_{\alpha \beta}$ yield</p>
+
+                  $$g_{\alpha \beta} = 2f(\sigma)\partial_\alpha X \cdot \partial_\beta X,$$
+                
+                <p style="font-size:16px">where $f(\sigma)$ is defined as</p>
+
+                  $$f^{-1}(\sigma) = g^{\rho \sigma}\partial_\rho X \cdot \partial_\sigma X.$$
+
+              </div>  
+  						<div class="logo-font mdl-cell mdl-cell--4-col">
+                <p style="font-size:16px">This action has the following symmetries:</p><br />
+                
+                <p style="font-size:16px">1. $D$-dimensional Poincaré invariance:</p>
+                
+                $$X^\mu \to \Lambda^\mu_\nu X^\nu + a^\mu,$$
+                $$g_{\alpha \beta} \to g_{\alpha \beta}.$$
+
+                <p style="font-size:16px">2. Diffeomorphism invariance:</p>
+                
+                $$X^\mu (\sigma) \to \tilde X^\mu (\tilde \sigma) = X^\mu (\sigma),$$
+                $$g_{\alpha \beta}(\sigma) \to \tilde g_{\alpha \beta} (\tilde \sigma) = \frac{\partial \sigma^\gamma}{\partial \tilde \sigma^\alpha} \frac{\partial \sigma^\delta}{\partial \tilde \sigma^\beta} g_{\gamma \delta}(\sigma).$$
+
+                <p style="font-size:16px">3. Two-dimensional Weyl invariance:</p>
+                
+                $$X^\mu (\sigma) \to X^\mu (\sigma),$$
+                $$g_{\alpha \beta}(\sigma) \to e^{2\phi (\sigma)}g_{\alpha \beta}(\sigma).$$
+
+  						</div>
+
+              <div class="logo-font mdl-cell mdl-cell--4-col">
+                <p style="font-size:16px">We can make the metric conformally flat (using the reparameterization invariance):</p>
+                
+                $$g_{\alpha \beta} = e^{2\phi}\eta_{\alpha \beta},$$
+
+                <p style="font-size:16px">Using the Weyl invariance we can set $\phi(\sigma) = 0$, yielding a flat metric:</p>
+
+                $$g_{\alpha \beta} = \eta_{\alpha \beta}.$$
+
+                <p style="font-size:16px">The Polyakov action then takes the form</p>
+
+                $$S = - \frac{1}{4\pi\alpha'}\int d^2 \sigma \partial_\alpha X \cdot \partial^\alpha X.$$
+
+                <p style="font-size:16px">This reduces the equations of motion for $X$ to a wave equation with constraints</p>
+
+                $$\dot X \cdot X' = 0, ~~~~~~~~~~~\frac{1}{2} ( \dot X^2 + X'^2 ) = 0.$$
+
+              </div> 
+              </div>
+						</div>
           </div>
 
         </div>
@@ -102,7 +170,7 @@
 
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
+		
     <!--This script and the div's below are for replacing div's on double clicking. Not currently on use-->
     <script>
       function someFunction() 
